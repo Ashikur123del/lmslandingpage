@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+    
+    /* Custom Keyframe Animations */
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes float-alt {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes pulse-light {
+      0% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.03); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .animate-float-alt {
+      animation: float-alt 5s ease-in-out infinite;
+    }
+
+    .animate-pulse-light {
+      animation: pulse-light 6s ease-in-out infinite;
+    }
+
+
+  
+.swiper-button-next, .swiper-button-prev {
+    svg {
+        height: 100%;
+        object-fit: contain;
+        transform-origin: center;
+        width: 100%;
+        fill: currentColor;
+        pointer-events: none;
+        display: none;
+    }
+}
+
+
+
+/* npx @tailwindcss/cli -i ./input.css -o ./output.css --watch */
